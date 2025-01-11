@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-function changeMood() {
+function changeExpression() {
     let img = document.getElementById('rover');
-    let mood = document.getElementById('mood').value;
+    let mood = document.getElementById('expression').value;
 
     img.src = 'assets/img/rover/' + mood + '.png';
 }
@@ -26,7 +26,7 @@ function save() {
     save_button.innerHTML = '<i class="fa-solid fa-check"></i> Done';
     setTimeout(() => {
         save_button.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Save to disk';
-    }, 2000);
+    }, 1000);
 
     domtoimage.toBlob(container)
         .then(function (blob) {
@@ -42,7 +42,7 @@ function copy() {
     copy_button.innerHTML = '<i class="fa-solid fa-check"></i> Done';
     setTimeout(() => {
         copy_button.innerHTML = '<i class="fa-solid fa-clipboard"></i> Copy to clipboard';
-    }, 2000);
+    }, 1000);
 
     domtoimage.toBlob(container)
         .then(function(blob) {
