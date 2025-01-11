@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+    const container = document.getElementById('container');
+    container.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+    });
+});
+
 function changeMood() {
     let img = document.getElementById('rover');
     let mood = document.getElementById('mood').value;

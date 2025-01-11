@@ -24,6 +24,7 @@ body {
 #container {
     height: 360px;
     position: relative;
+    user-select: none;
 }
 
 #rover {
