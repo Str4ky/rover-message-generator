@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Rover Message Generator" property="og:title">
+    <meta content="To make meme with Rover from the Animal Crossing series" property="og:description">
+    <meta content="https://str4ky.github.io/rover-message-generator" property="og:url">
+    <meta content="https://str4ky.github.io/rover-message-generator/assets/img/favicon.png" property="og:image">
+    <meta content="#9e6a3c" data-react-helmet="true" name="theme-color">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Rover Message Generator</title>
+</head>
+<body>
+    <img src="assets/img/logo.png" id="logo" alt="logo">
+    <div id="container">
+        <img src="assets/img/rover/happy.png" id="rover" alt="rover">
+        <p id="message"></p>
+    </div>
+    <p id="title">Rover's mood:</p>
+    <select id="mood" onchange="changeMood()">
+        <option value="happy">Happy</option>
+        <option value="comfy">Comfy</option>
+        <option value="laughing">Laughing</option>
+        <option value="sad">Sad</option>
+        <option value="angry">Angry</option>
+        <option value="confused">Confused</option>
+        <option value="shocked">Shocked</option>
+    </select>
+    <p id="title">Rover's message:</p>
+    <textarea id="input" placeholder="What could Rover say?" oninput="editMessage()"></textarea>
+    <div id="actions">
+        <a id="save" onclick="save()"><i class="fa-solid fa-floppy-disk"></i> Save to disk</a>
+        <a id="copy" onclick="copy()"><i class="fa-solid fa-clipboard"></i> Copy to clipboard</a>
+    </div>
+</body>
+</html>
+
+<script src="assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image-more/3.3.0/dom-to-image-more.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>

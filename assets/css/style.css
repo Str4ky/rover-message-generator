@@ -1,0 +1,105 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+    font-weight: bold;
+    background-image: url('../img/background.png');
+    background-size: cover;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    height: 360px;
+    position: relative;
+}
+
+#rover {
+    box-shadow: 0 0 5px 0px #000;
+}
+
+#message {
+    position: absolute;
+    top: 200px;
+    left: 135px;
+    font-size: 28px;
+    width: 60%;
+    white-space: normal;
+}
+
+#title {
+    display: block;
+    margin: 0 auto;
+    margin-top: 12px;
+    width: 600px;
+    height: 40px;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+#mood {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    width: 600px;
+    height: 35px;
+    background-color: #cad7c3;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#input {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    height: 75px;
+    background-color: #cad7c3;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 24px;
+    width: 600px;
+    height: 40px;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#actions a {
+    text-decoration: none;
+    background-color: #9e6a3c;
+    color: #ffdd00;
+    padding: 8px 24px;
+    border-top: 3px solid #efd3a5;
+    border-left: 3px solid #dbaf6c;
+    border-right: 3px solid #683a22;
+    border-bottom: 3px solid #4e2e1d;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#actions a:hover {
+    background-color: #b8804f;
+}
