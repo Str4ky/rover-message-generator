@@ -47,14 +47,22 @@ function copy() {
     }, 1000);
 
     htmlToImage.toBlob(container)
-        .then(function(blob) {
-            navigator.clipboard.write([
-                new ClipboardItem({
-                    'image/png': blob
+        .then((blob) => {
+            setTimeout(() => {
+                navigator.clipboard.write([
+                    new ClipboardItem({
+                        'image/png': blob
+                    })
+                ])
+                .then(() => {
+                    console.log("Image copied to clipboard successfully!");
                 })
-            ]);
+                .catch((error) => {
+                    console.error("Failed to copy image to clipboard:", error);
+                });
+            }, 0);
         })
-        .catch(function(error) {
+        .catch((error) => {
             console.error('oops, something went wrong!', error);
         });
 }
