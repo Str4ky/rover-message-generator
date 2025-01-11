@@ -10,7 +10,8 @@ html {
 #logo {
     display: block;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    margin-top: 12px;
     width: 400px;
 }
 
