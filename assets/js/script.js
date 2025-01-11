@@ -20,36 +20,41 @@ function editMessage() {
 }
 
 function save() {
-    let container = document.getElementById("container");
-    let save_button = document.getElementById("save");
+    const container = document.getElementById("container");
+    const saveButton = document.getElementById("save");
 
-    save_button.innerHTML = '<i class="fa-solid fa-check"></i> Done';
+    saveButton.innerHTML = '<i class="fa-solid fa-check"></i> Done';
     setTimeout(() => {
-        save_button.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Save to disk';
+        saveButton.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Save to disk';
     }, 1000);
 
-    domtoimage.toBlob(container)
-        .then(function (blob) {
+    htmlToImage.toBlob(container)
+        .then(function(blob) {
             saveAs(blob, 'rover.png');
-    });
-
+        })
+        .catch(function(error) {
+            console.error('oops, something went wrong!', error);
+        });
 }
 
 function copy() {
-    let container = document.getElementById("container");
-    let copy_button = document.getElementById('copy');
+    const container = document.getElementById("container");
+    const copyButton = document.getElementById("copy");
 
-    copy_button.innerHTML = '<i class="fa-solid fa-check"></i> Done';
+    copyButton.innerHTML = '<i class="fa-solid fa-check"></i> Done';
     setTimeout(() => {
-        copy_button.innerHTML = '<i class="fa-solid fa-clipboard"></i> Copy to clipboard';
+        copyButton.innerHTML = '<i class="fa-solid fa-clipboard"></i> Copy to clipboard';
     }, 1000);
 
-    domtoimage.toBlob(container)
+    htmlToImage.toBlob(container)
         .then(function(blob) {
             navigator.clipboard.write([
                 new ClipboardItem({
                     'image/png': blob
                 })
-            ])
+            ]);
+        })
+        .catch(function(error) {
+            console.error('oops, something went wrong!', error);
         });
 }
